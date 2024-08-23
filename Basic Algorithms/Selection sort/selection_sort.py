@@ -2,9 +2,7 @@ from utils.tools import time_execution
 
 
 def findSmallest(arr):
-    # для хранения наименьшего значения
     smallest = arr[0]
-    # для хранения индекса наименьшего значения
     smallest_index = 0
     for i in range(1, len(arr)):
         if arr[i] < smallest:
@@ -14,3 +12,14 @@ def findSmallest(arr):
 
 
 print(findSmallest([5, 3, 6, 2, 10]))
+
+
+def selectionSort(arr):
+    newArr = []
+    for i in range(len(arr)):
+        smallest = findSmallest(arr)
+        newArr.append(arr.pop(smallest))
+    return newArr
+
+
+print(selectionSort([5, 3, 6, 2, 10]))
