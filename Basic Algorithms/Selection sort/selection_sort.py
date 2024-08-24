@@ -1,6 +1,6 @@
 from utils.tools import time_execution
 
-
+@time_execution
 def findSmallest(arr):
     smallest = arr[0]
     smallest_index = 0
@@ -13,7 +13,7 @@ def findSmallest(arr):
 
 print(findSmallest([5, 3, 6, 2, 10]))
 
-
+@time_execution
 def selectionSort(arr):
     newArr = []
     for i in range(len(arr)):
